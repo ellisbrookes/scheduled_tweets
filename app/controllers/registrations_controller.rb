@@ -4,6 +4,7 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    render plain: "Thanks!"
+    Rails.logger.debug params.inspect
+    render plain: params[:user]
   end
 end
