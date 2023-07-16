@@ -4,7 +4,6 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    Rails.logger.debug params.inspect
-    render plain: params[:user]
+    redirect_to root_path, notice: "Thanks!"
   end
 end
